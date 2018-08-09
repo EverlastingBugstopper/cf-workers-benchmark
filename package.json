@@ -1,0 +1,36 @@
+{
+  "name": "cf-timer",
+  "version": "1.0.0",
+  "description": "Sample timer for cloudflare workers",
+  "main": "./src/index.js",
+  "scripts": {
+    "time:bottleneck": "npm run transpile && node transpiled/time.js",
+    "build": "webpack",
+    "fmt": "eslint --fix ./src",
+    "time:preview": "workers-preview < ./dist/worker.js --preview-url tutorial.cloudflareworkers.com/previewtime",
+    "time:request": "workers-preview < ./dist/worker.js --preview-url tutorial.cloudflareworkers.com/time",
+    "transpile": "./node_modules/.bin/babel ./src --source-maps-inline -d ./transpiled",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "stash.cfops.it:7999/~avery/worker-benchmark.git"
+  },
+  "author": "Avery Harnish",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "njstrace": "^1.0.1",
+    "node-fetch": "^2.2.0",
+    "prettier": "^1.14.0",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "workers-preview": "^1.0.4"
+  },
+  "dependencies": {}
+}
