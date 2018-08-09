@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "stash.cfops.it:7999/~avery/worker-benchmark.git"
+    "url": "https://github.com/EverlastingBugstopper/cf-workers-benchmark"
   },
   "author": "Avery Harnish",
   "license": "ISC",

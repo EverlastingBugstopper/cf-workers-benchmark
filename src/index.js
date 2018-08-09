@@ -1,9 +1,9 @@
+const getResponse = require("./response").getResponse;
+
 /* global addEventListener */
 addEventListener("fetch", event => {
   event.respondWith(handleRequest(event.request));
 });
-
-const getResponse = require("./response").getResponse;
 
 async function handleRequest(request) {
   if (request.url.endsWith("/time")) {
