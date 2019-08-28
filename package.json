@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "fmt": "eslint --fix ./src",
-    "time:bottleneck": "node transpiled/time.js",
+    "time:bottleneck": "npm run transpile && node transpiled/time.js",
     "time:preview": "workers-preview < ./dist/worker.js --preview-url tutorial.cloudflareworkers.com/previewtime",
     "time:request": "workers-preview < ./dist/worker.js --preview-url tutorial.cloudflareworkers.com/time",
     "transpile": "./node_modules/.bin/babel ./src --source-maps-inline -d ./transpiled",
